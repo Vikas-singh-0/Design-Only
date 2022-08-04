@@ -1,0 +1,116 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #350048;
+  padding: 40px 0;
+  box-sizing: border-box;
+}
+section::before {
+  content: "";
+  width: 100vw;
+  background: #bd00ff;
+  height: 50px;
+  position: absolute;
+}
+.container {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: center;
+  /* background-color: rgba(255, 255, 255, 0.408); */
+}
+.card {
+  position: relative;
+  height: 100%;
+  width: 300px;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border-radius: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  border-radius: 10px;
+}
+.percent {
+  position: relative;
+  width: 160px;
+  height: 16    0px;
+  border-radius: 50%;
+  z-index: 1;
+}
+.number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text {
+  position: absolute;
+  z-index: 1;
+  background-color: aliceblue;
+}
+svg:nth-child(1) {
+  stroke: rgba(237, 226, 226, 0.97);
+  stroke-width: 10px;
+  transform: translate(9px, 5px);
+  fill: none;
+  width: 100%;
+  /* stroke-dasharray: 440px; */
+  height: 100%;
+  stroke-dasharray: 440px;
+}
+svg:nth-child(2){
+        stroke: rgb(233, 11, 11);
+        /* stroke-dasharray: 440px; */
+        /* stroke-dashoffset: 100px; */
+        stroke-width: 8px;
+        transform: translate(9px, 5px);
+        width: 100%;
+        height: 100%;
+        fill: none;
+}
+svg circle{
+        stroke-linecap: round;
+        transform: translate(10px,5px);
+}
+
+#sec{ 
+        stroke: aqua;
+        stroke-dasharray: 440px;
+        animation: test 2s forwards;  
+}
+@keyframes test {
+        0%{
+                stroke-dashoffset: 440px;
+        }
+        100%{
+                stroke-dashoffset: 40px;
+        }
+}
